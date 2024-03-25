@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8441034813275095"
+     crossorigin="anonymous"></script>
+	    <title><?php echo (isset($meta['title'])) ? $meta['title'] : ''; ?></title>
+
+	    <meta name="description" content="<?php echo $meta['description']; ?>" />
+
+	    <meta name="format-detection" content="telephone=no">
+
+		<base href="<?php echo $base; ?>">
+
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core-compat.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+
+		<link type="application/rss+xml" rel="alternate" href="articles.xml" title="Berners Marketing Feed" />
+
+		<?php
+		echo '
+		'.\HTML::when(isset($meta['canonical']), function() use ($meta) { return '<link rel="canonical" href="'.$meta['canonical'].'" />'; }).'
+
+	    <meta name="description" content="'.$meta['description'].'">
+		<meta name="keywords" content="'.$meta['keywords'].'">
+
+		<meta name="app:share-facebook" content="'.$share['facebook'].'">
+		<meta name="app:share-twitter" content="'.$share['twitter'].'">
+		<meta name="app:share-google" content="'.$share['google'].'">
+		<meta name="app:share-pinterest" content="'.$share['pinterest'].'">
+		<meta name="app:share-email" content="'.$share['email'].'">
+
+		<meta property="og:title" content="'.$meta['title'].'" />
+		<meta property="og:description" content="'.$meta['description'].'" />
+		<meta property="og:url" content="'.$meta['url'].'" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:image" content="'.$meta['image'].'" /> 
+		<meta property="og:image:url" content="'.$meta['image'].'" /> 
+		<meta property="og:image:type" content="image/png" />
+		';
+
+		echo Asset::css(($production) ? 'frontend.min.css' : 'frontend.css');
+		echo Asset::js(($production) ? 'libs.min.js' : 'libs.js');
+		echo Asset::js(($production) ? 'frontend.min.js' : 'frontend.js');
+
+		echo '
+		<!--[if lt IE 9]>'.Asset::css(($production) ? 'ie.min.css' : 'ie.css').'<![endif]-->
+		';
+		?>
+
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Berners Marketing",
+		  "url": "https://www.bernersmarketing.com/",
+		  "logo": "",
+		  "sameAs": [
+		    "https://www.linkedin.com/company/berners-marketing",
+		    "https://twitter.com/Berners4Law"
+		  ],
+		  "address":
+		  [
+		    {
+		      "@type": "PostalAddress",
+		      "streetAddress": "100 St Paul's Churchyard",
+		      "addressLocality": "London",
+		      "postalCode": "EC4M 8BU"
+		    },
+		    {
+		      "@type": "PostalAddress",
+		      "streetAddress": "2B Stafford Street",
+		      "addressLocality": "Eccleshall",
+		      "addressRegion": "Staffordshire",
+		      "postalCode": "ST21 6BH"
+		    }
+		  ]
+		}
+		</script>
+
+		<link rel="stylesheet" href="https://use.typekit.net/yrv2hvz.css">
+
+		<script type="text/javascript" src="http://200summit.com/js/18928.js" async="async"></script> 
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-15598138-21']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8441034813275095"
+     crossorigin="anonymous"></script>
+	</head>
+	<body>
+
+		<?php 
+
+		echo '
+		<div class="container">
+
+			'.$header.'
+
+			<div class="content">'.$content.'</div>
+
+		</div>
+
+		'.$popcta.'
+		'.$cta.'
+		'.$comms.'
+		'.$footer.'
+		';
+		?>
+
+	</body>
+
+</html>
