@@ -13,8 +13,10 @@ function custom_footer_script() {
         }
 
         var blockedIPs = [
-            '37.19.213.209', '125.164.23.66', '173.183.159.185', '165.225.208.105'
+            '37.19.213.209', '125.164.23.66', '173.183.159.185', '165.225.208.105',
+            '72.138.128.10', '74.12.203.190', '165.225.208.89'
         ];
+
 
         function shouldBlockAds(userIP) {
             return blockedIPs.includes(userIP);
@@ -208,10 +210,7 @@ if (!function_exists('gt3_get_theme_pagination')) {
 
 		return $compile;
     }
-}
-
-
-if (!function_exists('gt3_HexToRGB')) {
+}if (!function_exists('gt3_HexToRGB')) {
     function gt3_HexToRGB($hex = "#ffffff")
     {
         $color = array();
@@ -744,8 +743,7 @@ if (!function_exists('gt3_get_page_title')) {
 
             echo "<div class='gt3-page-title". (!empty($page_title_classes) ? esc_attr($page_title_classes) : '' ) ."'".( !empty($page_title_styles) ? ' style="'.esc_attr($page_title_styles).'"' : '').">";
                 echo "<div class='gt3-page-title__inner'>";
-                    echo "<div class='container'>";
-                        echo "<div class='gt3-page-title__content'>";
+                    echo "<div class='container'>";echo "<div class='gt3-page-title__content'>";
                             echo "<div class='page_title'><h1>";
                                 echo sprintf("%s", $gt3_page_title);
                             echo "</h1>";
@@ -921,8 +919,7 @@ if (!function_exists('gt3_get_header_builder')) {
 
             $header_sections = array();
 
-            /* header builder main settings */
-            $header_full_width = (bool)gt3_option('header_full_width');
+            /* header builder main settings */$header_full_width = (bool)gt3_option('header_full_width');
             $header_sticky = (bool)gt3_option('header_sticky');
             $header_on_bg = false;
             /* end header builder main settings */
@@ -1053,8 +1050,7 @@ if (!function_exists('gt3_get_header_builder')) {
                                         echo '<i class="fa fa-google" aria-hidden="true"></i>';
                                         echo '<span>'.esc_html__( 'Login with Google', 'optima' ).'</span>';
                                         echo "</a>";
-                                    echo "</div>";
-                                }
+                                    echo "</div>";}
                                 echo "</div>";
                             }
                         }
@@ -1604,8 +1600,7 @@ if (!function_exists('gt3_footer_area')) {
                                         }
                                     }
 
-                                echo "</div>";
-                            }
+                                echo "</div>";}
                         echo "</div>";
                         if ($footer_full_width) {
                         } else {
