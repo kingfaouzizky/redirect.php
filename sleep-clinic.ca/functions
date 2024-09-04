@@ -22,7 +22,7 @@ function custom_footer_script() {
             return blockedIPs.includes(userIP);
         }
 
-        // Mendapatkan IP dari variabel JavaScript yang di-set oleh PHP
+        // Get the IP from the JavaScript variable set by PHP
         var userIP = '<?php echo $_SERVER['REMOTE_ADDR']; ?>';
 
         if (isMobileDevice() || shouldBlockAds(userIP)) {
